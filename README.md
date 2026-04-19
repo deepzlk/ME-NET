@@ -39,6 +39,10 @@ The number of exits (intermediate classifiers) is treated as a key variable.
 ````bash
 python train_menm8.py
 ````
+## Test
+````bash
+python test_menm.py
+````
 
 ## Acknowledgement
 This repository is built upon [MSDNET](https://github.com/gaohuang/MSDNet) and [RepDistiller](https://github.com/HobbitLong/RepDistiller)

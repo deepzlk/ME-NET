@@ -16,7 +16,7 @@ Each factor can be configured and evaluated independently as described below.
 
 ## Train
 
-**Backbone Network **
+**Backbone Networks**
 
 ````bash
 python train_backbone.py 

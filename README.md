@@ -14,11 +14,6 @@ Training strategy \
 
 Each factor can be configured and evaluated independently as described below. \
 
-
-
-
-
-
 ## Train
 
 **Backbone Network **
@@ -27,6 +22,11 @@ Each factor can be configured and evaluated independently as described below. \
 python train_backbone.py \
 ````
 
+**Backbone Network **
+
+````bash
+python train_backbone.py \
+````
 
 **Multi-Exit Network (MENET)**
 

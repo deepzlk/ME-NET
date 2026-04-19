@@ -45,6 +45,27 @@ python train_menm8.py
 ````bash
 python test_menm.py
 ````
+## Dataset
+
+**CIFAR-10**
+
+The CIFAR-10 dataset consists of 60,000 32×32 color images in 10 classes, with 50,000 training images and 10,000 test images.
+
+Krizhevsky, A. (2009). Learning Multiple Layers of Features from Tiny Images. University of Toronto.
+Available at: https://www.cs.toronto.edu/~kriz/cifar.html
+
+**CIFAR-100**
+
+The CIFAR-100 dataset is similar to CIFAR-10 but contains 100 classes, with 600 images per class (500 training and 100 testing images).
+
+Krizhevsky, A. (2009). Learning Multiple Layers of Features from Tiny Images. University of Toronto.
+Available at: https://www.cs.toronto.edu/~kriz/cifar.html
+
+**Tiny-ImageNet**
+
+Tiny-ImageNet is a subset of the ImageNet dataset, containing 200 classes with 500 training images, 50 validation images, and 50 test images per class. All images are resized to 64×64.
+
+https://www.kaggle.com/datasets/akash2sharma/tiny-imagenet
 
 ## Acknowledgement
 This repository is built upon [MSDNET](https://github.com/gaohuang/MSDNet) and [RepDistiller](https://github.com/HobbitLong/RepDistiller)

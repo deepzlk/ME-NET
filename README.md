@@ -10,31 +10,35 @@ Backbone network \
 Structure of intermediate classifiers \
 Position of intermediate classifiers \
 Number of intermediate classifiers \
-Training strategy \
+Training strategy 
 
-Each factor can be configured and evaluated independently as described below. \
+Each factor can be configured and evaluated independently as described below. 
 
 ## Train
 
 **Backbone Network **
 
 ````bash
-python train_backbone.py \
+python train_backbone.py 
 ````
 
 **Multi-Exit Network (MENET)**
 
 ````bash
-python train_menm.py \
+python train_menm.py 
 ````
 
 **Intermediate Classifier Structure & Position**
 The structure and insertion positions of intermediate classifiers are configurable.
 ````bash
-Location:models/util \
+Location:models/util 
 ````
+**Training Strategy of Intermediate Classifiers**
+The number of exits (intermediate classifiers) is treated as a key variable.
 
-
+````bash
+python train_menm8.py
+````
 
 ## Acknowledgement
 This repository is built upon [MSDNET](https://github.com/gaohuang/MSDNet) and [RepDistiller](https://github.com/HobbitLong/RepDistiller)

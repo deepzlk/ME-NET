@@ -3,7 +3,7 @@
 
 ## Train
 
-**vackbone Network **
+**Backbone Network **
 
 ````bash
 python train_backbone.py \

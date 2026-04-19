@@ -22,20 +22,18 @@ Each factor can be configured and evaluated independently as described below. \
 python train_backbone.py \
 ````
 
-**Backbone Network **
-
-````bash
-python train_backbone.py \
-````
-
 **Multi-Exit Network (MENET)**
 
 ````bash
 python train_menm.py \
 ````
-## Running
 
-1. Fetch the pretrained teacher models by:
+**Intermediate Classifier Structure & Position**
+The structure and insertion positions of intermediate classifiers are configurable.
+````bash
+Location:models/util \
+````
+
 
 
 ## Acknowledgement

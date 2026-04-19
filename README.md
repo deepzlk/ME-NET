@@ -29,11 +29,13 @@ python train_menm.py
 ````
 
 **Intermediate Classifier Structure & Position**
+
 The structure and insertion positions of intermediate classifiers are configurable.
 ````bash
 Location:models/util 
 ````
 **Training Strategy of Intermediate Classifiers**
+
 The number of exits (intermediate classifiers) is treated as a key variable.
 
 ````bash

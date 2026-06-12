@@ -325,8 +325,4 @@ Tian et al., *Contrastive Representation Distillation*, ICLR 2020.
 
 We sincerely thank the authors for making their code publicly available.
 
----
 
-# Contact
-
-For questions, bug reports, or collaboration opportunities, please open an issue in this repository.

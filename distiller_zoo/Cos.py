@@ -19,10 +19,10 @@ class CosSimilarity(nn.Module):
     @staticmethod
     def cosine_similarity_loss(feature1, feature2):
         # Normalize each vector by its norm
-        # 假设feature1为N*C*W*H， feature2也为N*C*W*H（基本网络中的tensor都是这样）
-        feature1 = feature1.view(feature1.shape[0], -1)  # 将特征转换为N*(C*W*H)，即两维
+        
+        feature1 = feature1.view(feature1.shape[0], -1)  
         feature2 = feature2.view(feature2.shape[0], -1)
-        feature1 = F.normalize(feature1)  # F.normalize只能处理两维的数据，L2归一化
+        feature1 = F.normalize(feature1)  
         feature2 = F.normalize(feature2)
         distance = torch.mm(feature1, feature2.transpose(0, 1))
         loss = torch.mean(distance)
@@ -30,8 +30,7 @@ class CosSimilarity(nn.Module):
     @staticmethod
     def lance_loss(feature1, feature2, eps=0.0000001):
         # Normalize each vector by its norm
-        # 假设feature1为N*C*W*H， feature2也为N*C*W*H（基本网络中的tensor都是这样）
-        feature1 = feature1.view(feature1.shape[0], -1)  # 将特征转换为N*(C*W*H)，即两维
+        feature1 = feature1.view(feature1.shape[0], -1)  
         feature2 = feature2.view(feature2.shape[0], -1)
         distance1=feature1-feature2
         distance1=torch.abs(distance1)
@@ -42,9 +41,8 @@ class CosSimilarity(nn.Module):
 
     @staticmethod
     def euclidean_loss(feature1, feature2, eps=0.0000001):
-        # Normalize each vector by its norm
-        # 假设feature1为N*C*W*H， feature2也为N*C*W*H（基本网络中的tensor都是这样）
-        feature1 = feature1.view(feature1.shape[0], -1)  # 将特征转换为N*(C*W*H)，即两维
+        # Normalize each vector by its norm       
+        feature1 = feature1.view(feature1.shape[0], -1)  
         feature2 = feature2.view(feature2.shape[0], -1)
 
         distance = feature1 - feature2

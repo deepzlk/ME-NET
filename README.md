@@ -17,17 +17,13 @@ The implementation is based on PyTorch and has been evaluated on CIFAR-10, CIFAR
 ```text
 ME-Net/
 │
+├── datasets/
+├── helper/
 ├── models/
-│   ├── util/
-│   ├── backbone/
-│   └── classifier/
-│
-├── train_backbone.py
 ├── train_menm.py
 ├── train_menm8.py
+├── test_iconly.py
 ├── test_menm.py
-│
-├── datasets/
 │
 └── README.md
 ```

@@ -141,7 +141,7 @@ class LabelSmoothing(nn.Module):
         super(LabelSmoothing, self).__init__()
         self.confidence = 1.0 - smoothing
         self.smoothing = smoothing
-        # 此处的self.smoothing即我们的epsilon平滑参数。
+        
 
     def forward(self, x, target):
         logprobs = torch.nn.functional.log_softmax(x, dim=-1)

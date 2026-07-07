@@ -64,9 +64,9 @@ Krizhevsky, A. (2009). *Learning Multiple Layers of Features from Tiny Images*.
 
 Website:
 
-https://www.cs.toronto.edu/~kriz/cifar.html
-
 https://github.com/deepzlk/ME-NET/releases/tag/Cifar
+
+https://www.cs.toronto.edu/~kriz/cifar.html
 
 ---
 
@@ -84,9 +84,9 @@ Krizhevsky, A. (2009). *Learning Multiple Layers of Features from Tiny Images*.
 
 Website:
 
-https://www.cs.toronto.edu/~kriz/cifar.html
-
 https://github.com/deepzlk/ME-NET/releases/tag/Cifar
+
+https://www.cs.toronto.edu/~kriz/cifar.html
 
 ---
 

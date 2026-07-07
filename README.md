@@ -17,6 +17,7 @@ The implementation is based on PyTorch and has been evaluated on CIFAR-10, CIFAR
 ```text
 ME-Net/
 │
+├── data/
 ├── datasets/
 ├── helper/
 ├── models/

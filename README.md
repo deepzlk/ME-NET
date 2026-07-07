@@ -150,15 +150,19 @@ python -c "import torch; print(torch.__version__)"
 
 # Code Information
 
-## Backbone Network Training
+The repository contains the following main scripts and modules for training and evaluating Multi-Exit Networks.
 
-Train a baseline backbone network without intermediate exits:
+## Training Scripts
+
+### Backbone Network Training
+
+Train a baseline backbone network without intermediate exits.
 
 ```bash
 python train_backbone.py
 ```
 
-Supported backbones include:
+Supported backbone networks include:
 
 - ResNet18
 - MobileNetV1
@@ -166,9 +170,9 @@ Supported backbones include:
 
 ---
 
-## Multi-Exit Network Training
+### Multi-Exit Network Training
 
-Train a standard Multi-Exit Network:
+Train a standard four-exit Multi-Exit Network.
 
 ```bash
 python train_menm.py
@@ -176,33 +180,37 @@ python train_menm.py
 
 ---
 
-## Multi-Exit Network with Multiple Exits
+### Multi-Exit Network Training (Eight Exits)
 
-Train networks containing larger numbers of exits:
+Train a Multi-Exit Network with eight intermediate classifiers.
 
 ```bash
 python train_menm8.py
 ```
 
-This script is mainly used for studying the effect of exit quantity.
+This script is mainly used to investigate the influence of the number of exits.
 
 ---
 
-## Testing
+## Evaluation
 
-Evaluate trained models:
+Evaluate the trained model.
 
 ```bash
 python test_menm.py
 ```
 
-The script reports classification accuracy for all exits and the final classifier.
+The testing script reports:
+
+- Classification accuracy of each exit
+- Final classifier accuracy
+- Overall model performance
 
 ---
 
-# Intermediate Classifier Configuration
+## Intermediate Classifier Configuration
 
-Intermediate classifier structures can be modified in:
+The intermediate classifier (IC) configurations are located in
 
 ```text
 models/util/
@@ -210,67 +218,82 @@ models/util/
 
 Researchers can customize:
 
+- Intermediate classifier structures
+- Exit positions
 - Classifier depth
-- Feature aggregation strategy
+- Feature aggregation strategies
 - Pooling operations
 - Fully connected layers
 
-This enables systematic comparison of different intermediate classifier designs.
+This flexible design enables systematic comparison of different Multi-Exit Network architectures under a unified experimental framework.
 
 ---
 
-# Experimental Methodology
+# Usage Instructions
 
-The experimental workflow follows these steps:
+The implementation is designed to provide a simple and reproducible experimental workflow. Users can reproduce the reported results by following the steps below.
 
-### Step 1: Train Backbone Networks
-
-Train baseline models without exits.
+## Step 1. Clone the Repository
 
 ```bash
-python train_backbone.py
+git clone https://github.com/deepzlk/ME-NET.git
+cd ME-NET
 ```
 
-### Step 2: Insert Intermediate Classifiers
+---
 
-Configure:
+## Step 2. Install Dependencies
 
-- Classifier structure
-- Classifier position
-- Number of exits
+```bash
+pip install torch torchvision numpy scipy tqdm
+```
 
-Location:
+---
+
+## Step 3. Prepare the Datasets
+
+Download the required datasets from the links provided in the **Dataset Information** section and place them in the `datasets/` directory.
 
 ```text
-models/util/
+ME-Net/
+│
+├── datasets/
+│   ├── cifar10/
+│   ├── cifar100/
+│   └── tiny-imagenet/
 ```
 
-### Step 3: Train Multi-Exit Networks
+---
+
+## Step 4. Train the Networks
+
+Run the training script to sequentially train the backbone network and the corresponding Multi-Exit Network.
 
 ```bash
-python train_menm.py
+bash train.sh
 ```
 
-or
+---
 
-```bash
-python train_menm8.py
-```
-
-### Step 4: Evaluate Performance
+## Step 5. Evaluate the Model
 
 ```bash
 python test_menm.py
 ```
 
-Evaluation metrics include:
-
-- Classification Accuracy
-- Exit-wise Accuracy
-- Model Complexity
-- Computational Overhead
+The testing script reports the classification accuracy of all exits and the final classifier.
 
 ---
+
+## Step 6. Customize the Network
+
+Modify the intermediate classifier configuration in
+
+```text
+models/util/
+```
+
+to investigate different backbone architectures, exit configurations, and intermediate classifier designs. After modifying the configuration, retrain the network before evaluation.
 
 # Reproducibility
 

@@ -24,7 +24,7 @@ import torch.nn.functional as F
 #
 # print(model_gen)
 # input = torch.randn(1, 3, 32, 32)
-# flops, params = profile(model_gen, inputs=(input,))  # profile（模型，输入数据）
+# flops, params = profile(model_gen, inputs=(input,))  # profile
 # print("flops",flops)
 # print("params", params)
 
@@ -241,7 +241,7 @@ if __name__ == '__main__':
 
     print(net)
 
-    flops, params = profile(net, inputs=(x,))  # profile（模型，输入数据）
+    flops, params = profile(net, inputs=(x,))  # profile
     print("flops", flops)
     print("params", params)
 

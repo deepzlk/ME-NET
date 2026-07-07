@@ -10,6 +10,10 @@ The framework supports multiple backbone networks, configurable intermediate cla
 
 The implementation is based on PyTorch and has been evaluated on CIFAR-10, CIFAR-100, and Tiny-ImageNet datasets.
 
+This repository provides the complete implementation used in our paper, including backbone training, multi-exit network construction, intermediate classifier design, training, evaluation, and benchmarking.
+
+It also contains the code for reproducing all experimental results reported in the paper.
+
 ---
 
 # Project Structure

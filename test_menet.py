@@ -198,7 +198,7 @@ def main():
 
     #model_emb = load_emb(opt.path_emb, n_cls)
 
-    # 打印模型的状态字典
+    
     # print("Model's state_dict:")
     # for param_tensor in model_fc.state_dict():
     #     print(param_tensor, "\t", model_fc.state_dict()[param_tensor].size())
